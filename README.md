@@ -70,6 +70,7 @@ npm run preview    # serve a versão de produção localmente
 
 ## Vídeo de Demonstração
 
+https://www.youtube.com/watch?v=hTT0mxkGRw4
 
 ## Participação dos Integrantes
 
