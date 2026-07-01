@@ -21,9 +21,18 @@ export default function App() {
   const [propostaEditando, setPropostaEditando] = useState(null)
   const [propostaExcluindo, setPropostaExcluindo] = useState(null)
 
+  const [temaEscuro, setTemaEscuro] = useState(
+    () => localStorage.getItem('plantajunto:tema') === 'escuro',
+  )
+
   useEffect(() => {
     recarregar()
   }, [])
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('tema-escuro', temaEscuro)
+    localStorage.setItem('plantajunto:tema', temaEscuro ? 'escuro' : 'claro')
+  }, [temaEscuro])
 
   function recarregar() {
     setPropostas(listarPropostas())
@@ -93,9 +102,19 @@ export default function App() {
               <p>Venda coletiva de grãos · Gestão de Propostas</p>
             </div>
           </div>
-          <button className="botao botao-primario" onClick={abrirCriacao}>
-            + Nova proposta
-          </button>
+          <div className="cabecalho-acoes">
+            <button
+              className="botao botao-tema"
+              onClick={() => setTemaEscuro((v) => !v)}
+              aria-label="Alternar tema claro ou escuro"
+              title="Alternar tema claro/escuro"
+            >
+              {temaEscuro ? '☀️' : '🌙'}
+            </button>
+            <button className="botao botao-primario" onClick={abrirCriacao}>
+              + Nova proposta
+            </button>
+          </div>
         </div>
       </header>
 

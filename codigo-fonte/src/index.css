@@ -8,8 +8,18 @@
   --cinza-borda: #d7dde0;
   --vermelho: #c62828;
   --branco: #ffffff;
+  --superficie: #ffffff;
   --fundo: #f4f7f5;
   --sombra: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.tema-escuro {
+  --verde-suave: #22302a;
+  --cinza-texto: #e4e9ec;
+  --cinza-borda: #38444c;
+  --superficie: #1c242a;
+  --fundo: #10161a;
+  --sombra: 0 2px 12px rgba(0, 0, 0, 0.45);
 }
 
 * {
@@ -47,7 +57,7 @@ textarea {
   padding: 0.6rem 0.75rem;
   border: 1px solid var(--cinza-borda);
   border-radius: 6px;
-  background-color: var(--branco);
+  background-color: var(--superficie);
   color: var(--cinza-texto);
 }
 

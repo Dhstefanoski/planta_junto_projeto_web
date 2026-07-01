@@ -42,6 +42,20 @@
   opacity: 0.9;
 }
 
+.cabecalho-acoes {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.botao-tema {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  font-size: 1.15rem;
+  line-height: 1;
+  padding: 0.5rem 0.7rem;
+}
+
 .conteudo {
   flex: 1;
   width: 100%;
@@ -58,7 +72,7 @@
 }
 
 .indicador {
-  background: var(--branco);
+  background: var(--superficie);
   border-radius: 10px;
   padding: 1.1rem 1.25rem;
   box-shadow: var(--sombra);
@@ -102,7 +116,7 @@
 }
 
 .card {
-  background: var(--branco);
+  background: var(--superficie);
   border-radius: 12px;
   padding: 1.25rem;
   box-shadow: var(--sombra);
@@ -271,7 +285,7 @@
 }
 
 .modal {
-  background: var(--branco);
+  background: var(--superficie);
   border-radius: 12px;
   width: 100%;
   max-width: 520px;
@@ -367,4 +381,35 @@
     justify-content: center;
     text-align: center;
   }
+}
+
+.tema-escuro .card,
+.tema-escuro .card-rodape {
+  border-color: #2a343b;
+}
+
+.tema-escuro .botao-secundario {
+  background: #2a343b;
+  color: var(--cinza-texto);
+}
+
+.tema-escuro .barra {
+  background: #2a343b;
+}
+
+.tema-escuro .status-aberta,
+.tema-escuro .botao-editar {
+  background: #22302a;
+  color: var(--verde-claro);
+}
+
+.tema-escuro .indicador-rotulo,
+.tema-escuro .card-descricao,
+.tema-escuro .card-dados .rotulo,
+.tema-escuro .progresso-texto,
+.tema-escuro .card-data,
+.tema-escuro .rodape,
+.tema-escuro .texto-confirmacao,
+.tema-escuro .vazio {
+  color: #9fb0b8;
 }
